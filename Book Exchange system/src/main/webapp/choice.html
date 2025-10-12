@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Your Preferences - Book Exchange System</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="js/theme-loader.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            📖 Book Exchange System
+        </div>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.href='login.html'">Login</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="choice-container">
+            <h1>Tell Us Your Reading Preferences</h1>
+            <p>Select your favorite genres, preferred publication types, and languages to get the best book matches.</p>
+
+            <form action="ChoiceServlet" method="post" id="preferenceForm">
+                
+                <input type="hidden" id="userPreferences" name="userPreferences" value="">
+
+                <h2>Favorite Topics/Genres</h2>
+                <div class="topic-grid" id="topicGrid">
+                    <div class="topic-item" data-type="topic" data-value="Fiction">Fiction 📚</div>
+                    <div class="topic-item" data-type="topic" data-value="Mystery">Mystery/Crime 🕵️</div>
+                    <div class="topic-item" data-type="topic" data-value="SciFi">Sci-Fi 🚀</div>
+                    <div class="topic-item" data-type="topic" data-value="Fantasy">Fantasy ✨</div>
+                    <div class="topic-item" data-type="topic" data-value="Thriller">Thriller 🔪</div>
+                    <div class="topic-item" data-type="topic" data-value="Romance">Romance ❤️</div>
+                    <div class="topic-item" data-type="topic" data-value="Biography">Biography 🧑‍💼</div>
+                    <div class="topic-item" data-type="topic" data-value="SelfHelp">Self-Help 🌱</div>
+                    <div class="topic-item" data-type="topic" data-value="Academic">Academic/Study 🎓</div>
+                    <div class="topic-item" data-type="topic" data-value="Cooking">Cooking/Food 🍽️</div>
+                    <div class="topic-item" data-type="topic" data-value="Poetry">Poetry 🖊️</div>
+                    <div class="topic-item" data-type="topic" data-value="Travel">Travel ✈️</div>
+                </div>
+                
+                <h2 style="margin-top: 40px;">Preferred Publication Type</h2>
+                <div class="topic-grid" id="typeGrid">
+                    <div class="topic-item" data-type="type" data-value="Novel">Novel / Fiction Book 📖</div>
+                    <div class="topic-item" data-type="type" data-value="Textbook">Textbook / Academic 📚</div>
+                    <div class="topic-item" data-type="type" data-value="Journal">Journal / Magazine 📰</div>
+                    <div class="topic-item" data-type="type" data-value="ResearchPaper">Research Paper / Thesis 🔬</div>
+                    <div class="topic-item" data-type="type" data-value="Anthology">Anthology / Collection 📓</div>
+                    <div class="topic-item" data-type="type" data-value="Manual">Manual / Guide 🛠️</div>
+                </div>
+
+                <h2 style="margin-top: 40px;">Preferred Language</h2>
+                <div class="topic-grid" id="languageGrid">
+                    <div class="topic-item" data-type="language" data-value="Hindi">Hindi</div>
+                    <div class="topic-item" data-type="language" data-value="English">English</div>
+                    <div class="topic-item" data-type="language" data-value="Marathi">Marathi</div>
+                    <div class="topic-item" data-type="language" data-value="Bengali">Bengali</div>
+                    <div class="topic-item" data-type="language" data-value="Tamil">Tamil</div>
+                    <div class="topic-item" data-type="language" data-value="Gujarati">Gujarati</div>
+                    <div class="topic-item" data-type="language" data-value="Punjabi">Punjabi</div>
+                    <div class="topic-item" data-type="language" data-value="Spanish">Spanish</div>
+                </div>
+
+                <div class="cta-button-area">
+                    <button class="main-cta-btn" type="button" onclick="collectAndSubmit()">Save & Proceed</button>
+                </div>
+            </form>
+            </div>
+    </main>
+
+    <footer>
+        <div class="project-info">
+            Guided By: Reshma Rasal
+        </div>
+        <div class="project-info">
+            Developed By: Shivansh, Vedant, Krunal, Atharva
+        </div>
+        <div class="copyright">
+            &copy; 2025 Book Exchange System. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/choice.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Book Exchange System</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/theme-loader.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <a href="index.html" class="system-title">Book Exchange System</a>
+        </div>
+        
+        <div class="header-controls">
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for books...">
+        <button id="searchButton">🔍</button>
+    </div>
+    <a href="notifications.html" class="nav-icon">🔔</a>
+</div>
+        </header>
+
+    <div id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+             <a href="dashboard.html" class="menu-link active">Dashboard</a>
+             <a href="my_books.html" class="menu-link">My Books</a>
+             <a href="appearance.html" class="menu-link">Appearance</a>
+             <a href="profile.html" class="menu-link">Profile</a>
+             <a href="download.html" class="menu-link">Downloads</a>
+        </nav>
+        <div class="logout-section">
+            <a href="LoginServlet?logout=true" class="menu-link" style="color: #e74c3c;">➡️ Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content-area">
+        <div class="dashboard-header">
+            <h2 id="welcome-message">Welcome Back!</h2>
+            <a href="upload_book.html" class="upload-button">📤 Upload a Book</a>
+        </div>
+        
+        <h3>Recently Added Books</h3>
+        <div class="scrollable-container">
+            <div class="book-grid" id="platformBooks"><p>Loading books...</p></div>
+        </div>
+
+        <h3>Personalized Recommendations</h3>
+        <p>Based on your preferences, you might like these:</p>
+        <div class="book-grid" id="userRecommendations"><p>Loading recommendations...</p></div>
+    </main>
+
+    <div id="requestModal" style="display:none;">
+        <div class="modal-content">
+            <h3 style="margin-top: 0;">Request Book: <span id="modalBookTitle"></span></h3>
+            <p>Your message will be sent to the book owner.</p>
+            <form id="sendMessageForm">
+                <textarea name="message" placeholder="Type your message..." rows="4" required></textarea>
+                <button type="submit" class="btn-request">Send Request</button>
+                <button type="button" id="cancel-modal-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/dashboard.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

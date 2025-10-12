@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Book Exchange System</title>
+    <script src="js/theme-loader.js"></script>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <a href="index.html" class="system-title">Book Exchange System</a>
+        </div>
+        <div class="header-controls">
+            <a href="notifications.html" class="nav-icon">🔔</a>
+        </div>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+             <a href="dashboard.html" class="menu-link">Dashboard</a>
+             <a href="my_books.html" class="menu-link">My Books</a>
+             <a href="appearance.html" class="menu-link">Appearance</a>
+             <a href="profile.html" class="menu-link active">Profile</a>
+             <a href="download.html" class="menu-link">Downloads</a>
+        </nav>
+        <div class="logout-section">
+            <a href="LoginServlet?logout=true" class="menu-link" style="color: #e74c3c;">➡ Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content-area">
+        <div class="breadcrumb">
+            <a href="dashboard.html">Home</a> / <span>User Profile</span>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-left">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="" alt="Profile Picture" id="profileImage">
+                    </div>
+                    <h2 id="profileName">User Name</h2>
+                    <p class="profile-title" id="profileUsername">@username</p>
+                </div>
+            </div>
+
+            <div class="profile-right">
+                <div class="info-card">
+                    <form id="profileForm">
+                        <div class="info-row">
+                            <span class="info-label">Full Name</span>
+                            <input type="text" id="fullName" class="info-value" readonly style="border:none; background:transparent;">
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Username</span>
+                             <input type="text" id="username" class="info-value" readonly style="border:none; background:transparent;">
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Email</span>
+                            <input type="email" id="email" class="info-value" readonly>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Mobile</span>
+                            <input type="tel" id="mobile" class="info-value" readonly>
+                        </div>
+                         <div class="info-row">
+                            <span class="info-label">New Password</span>
+                            <input type="password" id="password" class="info-value" placeholder="Enter new password to change" readonly>
+                        </div>
+                        <button type="button" class="btn-edit" id="editBtn">Edit Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="project-info">
+            Guided By: Reshma Rasal
+        </div>
+        <div class="project-info">
+            Developed By: Shivansh, Vedant, Krunal, Atharva
+        </div>
+        <div class="copyright">
+            &copy; 2025 Book Exchange System. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

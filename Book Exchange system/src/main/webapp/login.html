@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Book Exchange System</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="js/theme-loader.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            📖 Book Exchange System
+        </div>
+        <div class="nav-buttons">
+            <a href="index.html"><button>Home</button></a>
+            <a href="signup.html"><button>Signup</button></a>
+        </div>
+    </header>
+
+    <main class="login-page">
+        <div class="login-container">
+            <h1>Login</h1>
+            
+            <form action="LoginServlet" method="post">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" required>
+                </div>
+                
+                <button class="primary-btn" type="submit">Login</button>
+                
+                <p class="signup-link">
+                    Don't have an account? <a href="signup.html">Sign Up</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+   <footer>
+        <div class="project-info">
+            Guided By: Reshma Rasal
+        </div>
+        <div class="project-info">
+            Developed By: Shivansh, Vedant, Krunal, Atharva
+        </div>
+        <div class="copyright">
+            &copy; 2025 Book Exchange System. All rights reserved.
+        </div>
+    </footer>
+    
+</body>
+</html>

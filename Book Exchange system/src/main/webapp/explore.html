@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Books - Book Exchange System</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <a href="index.html" class="system-title">Book Exchange System</a>
+        </div>
+        
+        <div class="header-controls">
+            <div class="nav-buttons" style="display: flex; gap: 10px;">
+                <button onclick="window.location.href='login.html'" style="background-color: #2ecc71; color: white; padding: 8px 14px;">Login</button>
+                <button onclick="window.location.href='signup.html'" style="background-color: #3498db; color: white; padding: 8px 14px;">Signup</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+             <a href="dashboard.html" class="menu-link" onclick="event.preventDefault(); promptLogin('Please log in to view your dashboard.')">Dashboard</a>
+             <a href="javascript:void(0);" onclick="promptLogin('Please log in to view your books.')" class="menu-link">My Books</a>
+             <a href="javascript:void(0);" onclick="promptLogin('Please log in to change appearance.')" class="menu-link">Appearance</a>
+             <a href="javascript:void(0);" onclick="promptLogin('Please log in to view your profile.')" class="menu-link">Profile</a>
+             <a href="javascript:void(0);" onclick="promptLogin('Please log in to see your downloads.')" class="menu-link">Downloads</a>
+        </nav>
+    </aside>
+
+    <main class="main-content-area">
+        <div class="dashboard-header">
+            <h2>Explore All Books in Our Library</h2>
+        </div>
+        
+        <div class="book-grid" id="allBooksGrid" style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <p>Loading all available books...</p>
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script> 
+    <script src="js/explore.js"></script>
+    <script>
+        // Notification icon ke liye alag se login prompt
+        document.querySelector('.nav-icon').addEventListener('click', function(event) {
+            event.preventDefault(); // Default action (page par jaane se) rokein
+            promptLogin('Please log in to view notifications.');
+        });
+    </script>
+</body>
+</html>

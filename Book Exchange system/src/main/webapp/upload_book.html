@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload a Book - Book Exchange System</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/theme-loader.js"></script>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <style>
+        /* Dropdown style ko input field jaisa banane ke liye */
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; 
+            font-size: 1em;
+            background-color: white; /* select ka background white rakhein */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <a href="index.html" class="system-title">Book Exchange System</a>
+        </div>
+        <div class="header-controls">
+            <a href="notifications.html" class="nav-icon">🔔</a>
+        </div>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+             <a href="dashboard.html" class="menu-link">Dashboard</a>
+             <a href="my_books.html" class="menu-link active">My Books</a>
+             <a href="appearance.html" class="menu-link">Appearance</a>
+             <a href="profile.html" class="menu-link">Profile</a>
+             <a href="download.html" class="menu-link">Downloads</a>
+        </nav>
+        <div class="logout-section">
+            <a href="LoginServlet?logout=true" class="menu-link" style="color: #e74c3c;">➡️ Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content-area">
+        <div class="dashboard-header">
+            <h2>Upload a New Book</h2>
+        </div>
+
+        <div class="login-container" style="max-width: 600px; margin: 20px auto; text-align: left;">
+            <form action="UploadBookServlet" method="post" enctype="multipart/form-data">
+                
+                <div class="input-group">
+                    <label for="title">Book Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="genre">Genre/Topic:</label>
+                    <select id="genre" name="genre" required>
+                        <option value="" disabled selected>Select a genre</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Mystery">Mystery/Crime</option>
+                        <option value="SciFi">Sci-Fi</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Biography">Biography</option>
+                        <option value="SelfHelp">Self-Help</option>
+                        <option value="Academic">Academic/Study</option>
+                        <option value="Cooking">Cooking/Food</option>
+                        <option value="Poetry">Poetry</option>
+                        <option value="Travel">Travel</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="publication_type">Publication Type:</label>
+                    <select id="publication_type" name="publication_type" required>
+                        <option value="" disabled selected>Select a type</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Textbook">Textbook</option>
+                        <option value="Journal">Journal</option>
+                        <option value="Magazine">Magazine</option>
+                        <option value="Research Paper">Research Paper</option>
+                        <option value="Anthology">Anthology / Collection</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="language">Language:</label>
+                    <select id="language" name="language" required>
+                        <option value="" disabled selected>Select a language</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Gujarati">Gujarati</option>
+                        <option value="Punjabi">Punjabi</option>
+                        <option value="Spanish">Spanish</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="bookFile">Book File (Optional for Offline Exchange):</label>
+                    <input type="file" id="bookFile" name="bookFile" accept=".pdf,.epub,.mobi">
+                </div>
+                
+                <div class="input-group">
+    				<label for="coverImage">Book Cover Image (JPEG/PNG):</label>
+    				<input type="file" id="coverImage" name="coverImage" accept="image/*">
+				</div>
+                
+                <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="is_direct_use" name="is_direct_use" value="true">
+                    <label for="is_direct_use" style="margin: 0;">Available for Direct Download?</label>
+                </div>
+                
+                <button class="primary-btn" type="submit">Upload Book</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="project-info">
+            Guided By: Reshma Rasal
+        </div>
+        <div class="project-info">
+            Developed By: Shivansh, Vedant, Krunal, Atharva
+        </div>
+        <div class="copyright">
+            &copy; 2025 Book Exchange System. All rights reserved.
+        </div>
+    </footer>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Book Exchange System</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="js/theme-loader.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            📖 Book Exchange System
+        </div>
+        <div class="nav-buttons">
+            <a href="index.html"><button>Home</button></a>
+            <a href="login.html"><button>Login</button></a>
+        </div>
+    </header>
+
+    <main class="login-page">
+        <div class="login-container">
+            <h1>Create Account</h1>
+            
+            <form action="SignUpServlet" method="post">
+                
+                <div class="input-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" onkeyup="checkUsernameAvailability()" required>
+                    <span id="usernameStatus" style="font-size: 0.9em; margin-top: 5px; display: block;"></span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10,15}" title="Mobile number must contain 10-15 digits" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Create Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button class="primary-btn" type="submit">Sign Up</button>
+            </form>
+            
+            <p class="signup-link">
+                Already have an account? <a href="login.html">Log In</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="project-info">
+            Guided By: Reshma Rasal
+        </div>
+        <div class="project-info">
+            Developed By: Shivansh, Vedant, Krunal, Atharva
+        </div>
+        <div class="copyright">
+            &copy; 2025 Book Exchange System. All rights reserved.
+        </div>
+    </footer>
+    
+   <script src="js/signup.js"></script> 
+
+</body>
+</html>

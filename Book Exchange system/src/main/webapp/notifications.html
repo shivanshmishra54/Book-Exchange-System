@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Book Exchange System</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/theme-loader.js"></script>
+    <style>
+        .notification-item { background: #fff; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .notification-item p { margin: 0 0 10px 0; }
+        .notification-item .actions button { margin-right: 10px; padding: 8px 12px; cursor: pointer; border-radius: 5px; border: none; color: #fff; }
+        .btn-approve { background-color: #28a745; }
+        .btn-reject { background-color: #dc3545; }
+        .btn-download-notif { background-color: #007bff; }
+        .btn-send-info { background-color: #17a2b8; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <a href="index.html" class="system-title">Book Exchange System</a>
+        </div>
+        <div class="header-controls">
+            <a href="notifications.html" class="nav-icon">🔔</a>
+        </div>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+             <a href="dashboard.html" class="menu-link">Dashboard</a>
+             <a href="my_books.html" class="menu-link">My Books</a>
+             <a href="appearance.html" class="menu-link">Appearance</a>
+             <a href="profile.html" class="menu-link active">Profile</a>
+             <a href="download.html" class="menu-link">Downloads</a>
+        </nav>
+        <div class="logout-section">
+            <a href="LoginServlet?logout=true" class="menu-link" style="color: #e74c3c;">➡ Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content-area">
+        <div class="dashboard-header">
+            <h2>My Notifications</h2>
+        </div>
+        <div id="notification-list">
+            <p>Loading notifications...</p>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="project-info">
+            Guided By: Reshma Rasal
+        </div>
+        <div class="project-info">
+            Developed By: Shivansh, Vedant, Krunal, Atharva
+        </div>
+        <div class="copyright">
+            &copy; 2025 Book Exchange System. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/notifications.js"></script>
+</body>
+</html>

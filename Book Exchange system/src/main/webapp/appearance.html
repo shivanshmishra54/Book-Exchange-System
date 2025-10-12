@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appearance Settings</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/theme-loader.js"></script> <style>
+        .color-swatch-container { display: flex; gap: 20px; margin-top: 20px; }
+        .color-swatch { width: 50px; height: 50px; border-radius: 50%; cursor: pointer; border: 3px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: transform 0.2s; }
+        .color-swatch:hover { transform: scale(1.1); }
+        .color-swatch.selected { border-color: #000; }
+    </style>
+</head>
+<body>
+   <header>
+        <div class="header-left">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <a href="index.html" class="system-title">Book Exchange System</a>
+        </div>
+        <div class="header-controls">
+            <a href="notifications.html" class="nav-icon">🔔</a>
+        </div>
+    </header>
+
+    <div id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+             <a href="dashboard.html" class="menu-link">Dashboard</a>
+             <a href="my_books.html" class="menu-link">My Books</a>
+             <a href="appearance.html" class="menu-link">Appearance</a>
+             <a href="profile.html" class="menu-link active">Profile</a>
+             <a href="download.html" class="menu-link">Downloads</a>
+        </nav>
+        <div class="logout-section">
+            <a href="LoginServlet?logout=true" class="menu-link" style="color: #e74c3c;">➡ Logout</a>
+        </div>
+    </aside>
+
+    <main class="main-content-area">
+        <div class="dashboard-header">
+            <h2>Appearance Settings</h2>
+        </div>
+        <div class="info-card">
+            <h3>Choose a Theme Color</h3>
+            <p>Select a primary color for the website interface.</p>
+            <div class="color-swatch-container">
+                <div class="color-swatch" style="background-color: #3498db;" data-color="#3498db" title="Default Blue"></div>
+                <div class="color-swatch" style="background-color: #e74c3c;" data-color="#e74c3c" title="Red"></div>
+                <div class="color-swatch" style="background-color: #2ecc71;" data-color="#2ecc71" title="Green"></div>
+                <div class="color-swatch" style="background-color: #9b59b6;" data-color="#9b59b6" title="Purple"></div>
+                <div class="color-swatch" style="background-color: #f39c12;" data-color="#f39c12" title="Orange"></div>
+            </div>
+            <button id="saveThemeBtn" class="primary-btn" style="margin-top: 30px;">Save Theme</button>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="project-info">
+            Guided By: Reshma Rasal
+        </div>
+        <div class="project-info">
+            Developed By: Shivansh, Vedant, Krunal, Atharva
+        </div>
+        <div class="copyright">
+            &copy; 2025 Book Exchange System. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/appearance.js"></script>
+</body>
+</html>
